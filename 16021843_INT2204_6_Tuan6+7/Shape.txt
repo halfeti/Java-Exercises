@@ -1,0 +1,29 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package lab07;
+
+/**
+ *
+ * @author Nguyen Oanh
+ */
+abstract public class Shape {
+    protected int x,y;
+    protected Shape(int a,int b){
+        this.x=a;
+        this.y=b;
+    }
+    abstract public void erase();
+    abstract public void draw();
+    abstract public float Area();
+    abstract public void infor();
+    
+    public void moveTo(int a, int b){
+        erase();
+        x=a;
+        y=b;
+        draw();
+    }   
+}

@@ -1,0 +1,36 @@
+package lab07;
+
+/**
+ *
+ * @author Nguyen Oanh
+ */
+public class Diagram {
+    private final int D = 50;
+    private Layer[] layers;
+    private int countLayer;
+    
+    public Diagram(){
+        layers = new Layer[D+1];
+        countLayer = 0;
+    }
+    public void addLayer(Layer layer){
+        if(countLayer>=D){
+            return;
+        }else
+            layers[countLayer++]=layer;
+    }
+    public void moveShape(){
+        
+    }
+    public void deleteShape(){
+        for(int i=0; i<countLayer;i++){
+            layers[i].deleteCircle();
+        }
+    }
+    public void infor(){
+        for(int i=0;i<countLayer;i++){
+            System.out.println("Layer "+(i+1)+":");
+            layers[i].infor();
+        }
+    }       
+}

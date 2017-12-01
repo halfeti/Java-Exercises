@@ -1,0 +1,42 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package lab07;
+
+/**
+ *
+ * @author Nguyen Oanh
+ */
+public class Square extends Shape{
+    private final int edge;
+    private int a, b;
+    public Square(int a, int b, int edge){
+        super(a,b);
+        this.edge= edge;
+    }
+
+    @Override
+    public void erase() {
+        System.out.println("Erase Square");
+    }
+
+    @Override
+    public void draw() {
+        System.out.println("Draw Square");
+    }
+
+    @Override
+    public float Area() {
+        int area=this.edge*this.edge;
+        return area;
+    }
+
+    @Override
+    public void infor() {
+        System.out.println("Square canh: "+this.edge);
+        System.out.println("Dien tich: "+Area());
+    }
+    
+}

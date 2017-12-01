@@ -1,0 +1,30 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package lab08;
+
+/**
+ *
+ * @author Admin
+ */
+public class ExpressionTest {
+    public static void main(String[] args) {
+        Expression left = new Subtraction(new Numeral().Numeral(10^2), new Numeral().Numeral(1));
+        Expression right = new Subtraction(new Numeral().Numeral(2*3), new Numeral().Numeral(0));
+        
+        Expression ex1 = new Addition(left, right);
+        Expression ex2 = new Subtraction(left, right);
+        Expression ex3 = new Multiplication(left, right);
+        Expression ex4 = new Division(left, right);
+        ex1.toString();
+        ex1.evaluate();
+        ex2.toString();
+        ex2.evaluate();
+        ex3.toString();
+        ex3.evaluate();
+        ex4.toString();
+        ex4.evaluate();      
+    }
+}

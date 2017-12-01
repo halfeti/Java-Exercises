@@ -1,0 +1,21 @@
+﻿NHẬP XUẤT FILE - HƯỚNG DẪN CÁC CHỨC NĂNG CHÍNH
+Project hiện tại được thi hành trên giao diện console của Netbeans, chưa khớp vào java Swing.
+
+1. Project bao gồm các class:
+	- ClearScreen: Xóa màn hình console.
+	- MenuPrintout: In ra các menu trên giao diện console (Không sử dụng trong Java Swing)
+	- ScanWordDict:	Tra từ điển
+	- Word:	Các thao tác, phương thức để tương tác với đối tượng là 1 từ.
+	- WordGroup: Các thao tác, phương thức để tương tác với đối tượng là 1 bộ từ (1 file text).
+2. Hàm main nằm trong class BigProject (Không được sử dụng trong Java Swing)
+3. Các phương thức trong class WordGroup:
+	- addWord(): Thêm 1 từ vào bộ từ đang chọn.
+	- browseWords(): Liệt kê ra danh sách các từ có trong bộ từ.
+	- create(String name): Tạo 1 bộ từ mới với tên là "name".
+	- delete(WordGroup a): Xóa bộ từ mà đối tượng a đang trỏ vào.
+	- isExists(String name): Kiểm tra xem bộ từ mang tên "name" có tồn tại hay chưa.
+	- learn(): Học từ (chưa xong)
+	- merge(WordGroup a): Ghép bộ từ mà đối tượng a đang trỏ tới với bộ từ đang được chọn. Bộ từ a sẽ nằm phía dưới bộ từ đang chọn và file chứa bộ từ a sẽ xóa sau khi ghép.
+	- remove(String name): Xóa từ "name" trong bộ từ đang chọn.
+	- renameTo(String name): Đổi tên bộ từ đang chọn thành "name".
+4. Các phương thức trong class Word:

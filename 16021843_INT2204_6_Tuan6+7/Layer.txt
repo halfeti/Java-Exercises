@@ -1,0 +1,68 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package lab07;
+
+/**
+ *
+ * @author Nguyen Oanh
+ */
+class Layer {
+    private static final int L= 100;
+    private Shape[] shapes;
+    private int countShape;
+    boolean visible;
+
+    public Layer(){
+	shapes = new Shape[L+1];
+	countShape = 0;
+    }
+	
+    public void addShape(Shape shape) {
+	if (countShape >= L) {
+	    return;
+	}else
+            shapes[countShape++]=shape;
+}
+	
+    private void deleteShape(int index) {
+	if (countShape == 0) {
+	    return;
+	}
+	for (int i=index; i<countShape; i++) {
+	    shapes[i] = shapes[i+1];
+	}
+	countShape--;
+}
+	
+    public void deleteTriangle() {
+	for (int i=0; i<countShape; i++) {
+	    if (shapes[i] instanceof Triangle == true) {
+                deleteShape(i);
+            }
+        }
+}
+    public void deleteCircle() {
+	for (int i=0; i<countShape; i++) {
+	    if (shapes[i] instanceof Circle == true) {
+                deleteShape(i);
+            }
+		}
+	}
+    public void infor() {
+	for (int i=0; i<countShape; i++) {
+	    shapes[i].infor();
+	}
+}
+    public void testVisible(boolean visible){
+	if(visible == true){
+    	    for (int i=0; i<countShape; i++){
+                shapes[i].infor();
+            }
+        }else
+	    return;
+    }
+}
+
